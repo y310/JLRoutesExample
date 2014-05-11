@@ -7,13 +7,27 @@
 //
 
 #import "JREAppDelegate.h"
+#import <JLRoutes.h>
 
 @implementation JREAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [JLRoutes addRoute:@"/:controller/:action/:id" handler:^BOOL(NSDictionary *parameters) {
+        NSLog(@"%@", parameters);
+        return YES; // return YES to say we have handled the route
+    }];
+    [[JLRoutes routesForScheme:@"jrewild"] addRoute:@"/wildcards/*" handler:^BOOL(NSDictionary *parameters) {
+        NSLog(@"%@", parameters);
+        return YES;
+    }];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"%@", sourceApplication);
+    return [JLRoutes routeURL:url];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -21,6 +21,7 @@
 		462CAF23191F2C76006EA9FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462CAF05191F2C76006EA9FE /* UIKit.framework */; };
 		462CAF2B191F2C76006EA9FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 462CAF29191F2C76006EA9FE /* InfoPlist.strings */; };
 		462CAF2D191F2C76006EA9FE /* JLRoutesExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CAF2C191F2C76006EA9FE /* JLRoutesExampleTests.m */; };
+		78A4BE0110E44C409E2BD793 /* libPods-JLRoutesExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 778BB3FAE7AA45429FEBB650 /* libPods-JLRoutesExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21A66BD83D9747828886F4EA /* Pods-JLRoutesExample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLRoutesExample.xcconfig"; path = "Pods/Pods-JLRoutesExample.xcconfig"; sourceTree = "<group>"; };
 		462CAEFE191F2C76006EA9FE /* JLRoutesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLRoutesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462CAF01191F2C76006EA9FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		462CAF03191F2C76006EA9FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 		462CAF28191F2C76006EA9FE /* JLRoutesExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JLRoutesExampleTests-Info.plist"; sourceTree = "<group>"; };
 		462CAF2A191F2C76006EA9FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		462CAF2C191F2C76006EA9FE /* JLRoutesExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRoutesExampleTests.m; sourceTree = "<group>"; };
+		778BB3FAE7AA45429FEBB650 /* libPods-JLRoutesExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLRoutesExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				462CAF04191F2C76006EA9FE /* CoreGraphics.framework in Frameworks */,
 				462CAF06191F2C76006EA9FE /* UIKit.framework in Frameworks */,
 				462CAF02191F2C76006EA9FE /* Foundation.framework in Frameworks */,
+				78A4BE0110E44C409E2BD793 /* libPods-JLRoutesExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				462CAF26191F2C76006EA9FE /* JLRoutesExampleTests */,
 				462CAF00191F2C76006EA9FE /* Frameworks */,
 				462CAEFF191F2C76006EA9FE /* Products */,
+				21A66BD83D9747828886F4EA /* Pods-JLRoutesExample.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				462CAF03191F2C76006EA9FE /* CoreGraphics.framework */,
 				462CAF05191F2C76006EA9FE /* UIKit.framework */,
 				462CAF20191F2C76006EA9FE /* XCTest.framework */,
+				778BB3FAE7AA45429FEBB650 /* libPods-JLRoutesExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 462CAF30191F2C76006EA9FE /* Build configuration list for PBXNativeTarget "JLRoutesExample" */;
 			buildPhases = (
+				DF9DF43A63B34D34B1029FC8 /* Check Pods Manifest.lock */,
 				462CAEFA191F2C76006EA9FE /* Sources */,
 				462CAEFB191F2C76006EA9FE /* Frameworks */,
 				462CAEFC191F2C76006EA9FE /* Resources */,
+				CD8D0B64F6354D2782DB034D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +252,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD8D0B64F6354D2782DB034D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-JLRoutesExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF9DF43A63B34D34B1029FC8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		462CAEFA191F2C76006EA9FE /* Sources */ = {
@@ -374,6 +415,7 @@
 		};
 		462CAF31191F2C76006EA9FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A66BD83D9747828886F4EA /* Pods-JLRoutesExample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +429,7 @@
 		};
 		462CAF32191F2C76006EA9FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A66BD83D9747828886F4EA /* Pods-JLRoutesExample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +500,7 @@
 				462CAF32191F2C76006EA9FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462CAF33191F2C76006EA9FE /* Build configuration list for PBXNativeTarget "JLRoutesExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +509,7 @@
 				462CAF35191F2C76006EA9FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

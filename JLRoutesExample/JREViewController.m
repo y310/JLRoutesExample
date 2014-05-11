@@ -26,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tap:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"jre://user/view/456?foo=bar;baz=boo"]];
+}
+
+- (IBAction)tapWildcard:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"jrewild://wildcards/foo/bar?baz=boo"]];
+}
 @end
